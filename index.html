@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<title>Dinosaur Game</title>
+	<meta name="description" content="Dinosaur Game is a wonderful running game that invites you to embark on an exciting adventure with a green dinosaur. Run as far as possible in the desert.">
+	<meta name="keywords" content="Dinosaur Game">
+	<meta name="title" content="Dinosaur Game">
+	<meta property="og:title" content="Dinosaur Game">
+	<meta property="og:site_name" content="Dinosaur Game">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://dinosaurgame3d.com">
+	<meta property="og:description" content="Dinosaur Game is a wonderful running game that invites you to embark on an exciting adventure with a green dinosaur. Run as far as possible in the desert.">
+	<meta property="og:image" content="https://dinosaurgame3d.com/storage/game/dinosaur-game/logo-dinosaur-game-196.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Dinosaur Game">
+	<meta name="twitter:description" content="Dinosaur Game is a wonderful running game that invites you to embark on an exciting adventure with a green dinosaur. Run as far as possible in the desert.">
+	<meta name="twitter:image" content="https://dinosaurgame3d.com/storage/game/dinosaur-game/logo-dinosaur-game-196.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, shrink-to-fit=no viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Dinosaur Game">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#1a1a2e">
+	<link rel="icon" type="image/png" href="https://dinosaurgame3d.com/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="https://dinosaurgame3d.com/favicon.svg">
+	<link rel="shortcut icon" href="https://dinosaurgame3d.com/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://dinosaurgame3d.com/apple-touch-icon.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="canonical" href="https://dinosaurgame3d.com">
+    <script>
+        const DOMAIN = 'dinosaurgame3d.com'
+    </script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6701622041662628" crossorigin="anonymous"></script>
+	<meta name="google-adsense-account" content="ca-pub-6701622041662628">
+	<!-- Google tag (gtag.js) -->
+	<script src="https://www.googletagmanager.com/gtag/js?id=G-5TKLJ0GRMR" defer></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		window.addEventListener('load', function() {
+			gtag('js', new Date());
+			gtag('config', 'G-5TKLJ0GRMR');
+		});
+	</script>
+	<link rel="preload" href="/static/css/reboot.css" as="style" onload="this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="/static/css/reboot.css">
+	</noscript>
+	<link rel="preload" href="/static/css/home.css?v=3" as="style" onload="this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="/static/css/home.css?v=3">
+	</noscript>
+	<link rel="preload" href="/static/css/game.css?v=1" as="style" onload="this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="/static/css/game.css?v=1">
+	</noscript>
+
+
+	<style>
+		*,
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+
+		body {
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			font-display: swap;
+			min-height: 3em;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			background-color: #000;
+
+		}
+
+		.main-panel {
+			position: absolute;
+			top: 0 !important;
+			right: 0;
+			max-width: 310px;
+			z-index: 2147483631;
+			margin: 0;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			border-left: 1px solid #adb5bd;
+			background: #eee;
+			color: #000;
+			text-align: justify;
+			overflow-y: auto;
+			overflow-x: hidden;
+			height: 100vh;
+		}
+
+		.main-panel::-webkit-scrollbar {
+			width: 8px;
+			height: 5px;
+		}
+
+		.main-panel::-webkit-scrollbar-thumb {
+			background: #6c757d;
+			border-radius: 10px;
+		}
+
+		.main-panel::-webkit-scrollbar-track {
+			background: 0 0;
+		}
+
+		.main-panel h1,
+		.main-panel h2,
+		.main-panel h3,
+		.main-panel p,
+		.main-panelol,
+		.main-panel ul,
+		.main-panel dl {
+			margin-bottom: 0;
+			margin-top: 5px;
+			font-size: 15px;
+			padding: 0 5px;
+			display: block;
+			width: 300px;
+			overflow: hidden;
+			float: left;
+			font-display: swap;
+		}
+
+		.btn-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2147483632;
+			width: 310px;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+		button.hide-main-panel {
+			position: absolute;
+			background: #eee;
+			width: 30px;
+			height: 42px;
+			left: -29px;
+			top: 35px;
+			padding: 2px 0 2px 1px;
+			border: 1px solid #adb5bd;
+			border-right: none;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			color: #6c757d;
+			z-index: 2147483631;
+		}
+
+		.menu-box a {
+			text-decoration: none;
+			margin: 3px;
+			color: #333;
+			border-radius: 5px;
+			font-weight: 700;
+			display: block;
+			text-transform: capitalize;
+			font-size: 18px;
+			padding: 0 5px;
+			width: fit-content;
+			float: left;
+			height: 33px;
+			line-height: 33px;
+			cursor: pointer;
+		}
+
+		.cr-img {
+			width: 90px;
+			height: 90px;
+		}
+
+		.cr-detail img {
+			height: 90px;
+		}
+
+		.cr-info {
+			opacity: 0;
+		}
+
+		#default-demo img {
+			width: 24px !important;
+			margin: 2px !important;
+			padding-top: 6px !important;
+		}
+
+		.rating {
+			height: 30px;
+			width: 160px !important;
+		}
+
+		#unity-loading-bar {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: black;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		.rating-element {
+			width: 100% !important;
+		}
+
+		.unity-box {
+			width: 100%;
+			height: 28px;
+			overflow: hidden;
+		}
+
+		.ads_loadding_content {
+			width: 100vw;
+			text-align: center;
+			min-width: 300px;
+			min-height: 250px;
+			overflow: hidden;
+			margin-top: 10px;
+		}
+
+		.item-game {
+			width: 33.33333%;
+			float: left;
+			display: block;
+		}
+
+		.tilte-game {
+			width: 100%;
+			font-size: 28px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.btn_play_a {
+			width: 150px;
+			height: 60px;
+			border-radius: 50px;
+			background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+			box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+			outline: none;
+			border: none;
+			font-size: 24px;
+			color: white;
+			margin-top: 15px;
+		}
+
+		@media (max-width: 991px) {
+			#unity-loading-bar .ads_loadding {
+				display: block;
+			}
+
+			#unity-loading-bar .ads_loadding_content,
+			#unity-loading-bar .ads_loadding_text,
+			#loader .ads_loadding_content,
+			#loader .ads_loadding_text {
+				display: none;
+			}
+
+			.tilte-game {
+				margin-top: 0;
+			}
+
+		}
+
+		#div_btn_play {
+			display: block;
+			width: 100vw;
+			height: 75px;
+			text-align: center;
+			position: absolute;
+		}
+		.cr-item-content{
+			width: 90px;
+			height: 90px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<script type="application/ld+json">
+		[{
+				"@context": "https://schema.org",
+				"@type": "VideoGame",
+				"name": "Dinosaur Game",
+				"url": "https://dinosaurgame3d.com",
+				"operatingSystem": "Windows, Chrome OS, Linux, MacOS",
+				"description": "Dinosaur Game is a wonderful running game that invites you to embark on an exciting adventure with a green dinosaur. Run as far as possible in the desert.",
+				"applicationCategory": "game",
+				"genre": [
+					"Endless Runner",
+					"Arcade game",
+					"Casual game",
+					"3D game"
+				],
+				"gamePlatform": [
+					"Web Browser",
+					"Mobile",
+					"Desktop",
+					"PC"
+				],
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": 4.4,
+					"bestRating": 5,
+					"worstRating": 1,
+					"ratingCount": 74				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "Dinosaur Game",
+					"url": "https://dinosaurgame3d.com"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD",
+					"availability": "https://schema.org/InStock"
+				},
+				"keywords": "Dinosaur Game",
+				"image": "https://dinosaurgame3d.com/storage/game/dinosaur-game/logo-dinosaur-game-196.png"
+			},
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [{
+					"@type": "ListItem",
+					"position": 1,
+					"item": {
+						"@type": "Thing",
+						"@id": "https://dinosaurgame3d.com",
+						"name": "Dinosaur Game"
+					}
+				}]
+			}
+		]
+	</script>
+		<div class="btn-button"><button type="button" class="btn btn-default hide-main-panel" title="Show/hide"><i class="">>></i></button></div>
+	<div class="main-panel">
+		<div class="menu-box" style="height: 33px;">
+			<a href="/">Home</a>
+			<a href="/hot-games">Hot games</a> 
+			<a href="/new-games">New games</a>
+		</div>
+		<div style="width:300px;float: left;display: block; position: relative; margin: 3px;">
+			<form method="get" action="/search" id="search">
+				<input style="width: 100%; height: 33px;" id="dark-input-search" name="kw" type="text" placeholder="Search here..." class="inputsearch" />
+				<button style="position: absolute; top: -1px; right: 0; border: none;background: none;font-size: 25px;" type="submit" aria-label="Search">⌕</button>
+			</form>
+		</div>
+		<div style="width:300px;float: left;display: block; text-transform: uppercase;    text-align: center;    height: 20 px;    letter-spacing: 1px;    color: #9e9e9e;    font-size: 9px;  display:none;">Advertisement</div>
+		<div style="width:300px; min-height: 250px; height: 250px; float: left;display: block; text-align: center; margin-bottom: 5px; overflow: hidden; display:none">
+			<div style="text-transform: uppercase;    text-align: center;    height: 20 px;    letter-spacing: 1px;    color: #9e9e9e;    font-size: 9px;">Advertisement</div>
+			<div id="Ads1" style="width: 300px;height: 250px;overflow: hidden; ">
+			</div>
+		</div>
+		<h1 style="width:300px;float: left;display: block;">Dinosaur Game</h1>
+		<link rel="preload" href="/static/star-rating-svg.css" as="style" onload="this.rel='stylesheet'">
+		<noscript>
+			<link rel="stylesheet" href="/static/star-rating-svg.css">
+		</noscript>
+		<div class="css-1rcr72c" style="width:300px; height:35px;float: left;display: block;position: relative;">
+			<div class="my-rating" style="width:125px;height:35px;position: absolute;"></div>
+			<div style="width: 150px;height: 35px;min-height: 35px;position: absolute;position: absolute;right: 0px;top: 2px;" class="MuiBox-root css-hrlctq">
+				<div data-id="10301"
+					class="css-iuagh">74</div>
+				<div class="css-qkofrw">ratings</div> 
+				<div class="css-1pnh80q">4.4</div>
+			</div>
+		</div>
+		<script defer src="/static/js/jquery-2.1.4.min.js"></script>
+		<script defer src="/static/jquery.star-rating-svg-home.js?v=1.4"></script>
+		<span style="width: 300px !important;display: block;float: left;font-weight: bold;padding: 0 5px;">Recommend For You</span>
+
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/dino-t-rex-run">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Dino T-Rex Run</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/flappy-bird">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Flappy Bird</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/geometry-dash-3d">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Geometry Dash 3D</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/dino-domination">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Dino Domination</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/math-duck">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Math Duck</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/eggy-car">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Eggy Car</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/dino-ice-age">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Dino Ice Age</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/dino-crowd">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Dino Crowd</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/rodha">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Rodha</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/cluster-rush">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Cluster Rush</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/rhino-rush-stampede">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">Rhino Rush Stampede</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+					<div class="item-game">
+				<div class="cr-item">
+					<a href="/ovo">
+						<div class="cr-detail">
+							<div class="cr-item-content">
+								<div class="cr-img">
+								</div>
+								<div class="cr-info">OvO</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+				<script>
+			let imgIteam = ["\/storage\/game\/dino-t-rex-run\/Dino-T-Rex-Run.JPG","\/storage\/game\/flappy-bird\/Flappy-Bird.jpg","\/storage\/game\/geometry-dash-3d\/Geometry-Dash-3D.png","\/storage\/game\/dino-domination\/Dino-Domination.png","\/storage\/game\/math-duck\/Math-Duck.jpg","\/storage\/game\/eggy-car\/Eggy-Car.jpg","\/storage\/game\/dino-ice-age\/Dino-Ice-Age.jpg","\/storage\/game\/dino-crowd\/Dino-Crowd.png","\/storage\/game\/rodha\/Rodha.jpg","\/storage\/game\/cluster-rush\/Cluster-Rush.png","\/storage\/game\/rhino-rush-stampede\/Rhino-Rush-Stampede.JPG","\/storage\/game\/ovo\/OvO.png"];
+			let titleIteam = ["Dino T-Rex Run","Flappy Bird","Geometry Dash 3D","Dino Domination","Math Duck","Eggy Car","Dino Ice Age","Dino Crowd","Rodha","Cluster Rush","Rhino Rush Stampede","OvO"];
+			let cr_img = document.querySelectorAll(".cr-img");
+			document.addEventListener("DOMContentLoaded", function() {
+				let oneEven = 0;
+
+				function ActionEvent() {
+					if (oneEven === 0) {
+						oneEven = 1;
+						const timer = setInterval(() => {
+							for (let i = 0; i < cr_img.length; i++) {
+								cr_img[i].innerHTML = '<img loading="lazy" rel="preload" src="' + imgIteam[i] + '" title="' + titleIteam[i] + '"alt="' + titleIteam[i] + '">';
+							}
+							clearInterval(timer);
+						}, 5);
+					}
+				}
+
+				function handleClick(e) {
+					ActionEvent();
+					document.removeEventListener("click", handleClick);
+				}
+				document.addEventListener("click", handleClick);
+
+				function handlemousemove(e) {
+					ActionEvent();
+					document.removeEventListener("mousemove", handlemousemove);
+				}
+				document.addEventListener("mousemove", handlemousemove);
+
+			});
+		</script>
+		<h2>General information about Dinosaur Game</h2>
+
+<p>Dinosaur Game is a wonderful running game that invites you to embark on an exciting adventure with a green dinosaur. Run as far as possible in the desert.</p>
+
+<p>The 2D version of this game must be super famous to millions of people from all over the world. With the aim of entertaining people when they have an Internet disconnection issue, Google created the 2D version of Dinosaur Game. It is available on the Google Chrome web browser. Although this is a simple game that is easy to play, it surprisingly attracts many players. It is being played 270 million times a month and receives many flattering compliments.</p>
+
+<h2>Dinosaur Game 3D</h2>
+
+<p>Dinosaur Game 3D is an exciting runner game that features awesome 3D graphics. This game requires you to explore the desert and join an endless running race. Unlike the original version, the graphics in this game are 3D pixels. In addition, everything in this game is colored. For example, during the adventure, you can see the yellow sky and sand, green cactuses, brown pterodactyls, and pink flowers. and so on. This will help to boost your playing experience when you play this game. In addition, the developer added catchy music and funny sound effects which help to lift your mood during the adventure.</p>
+
+<h2>Dinosaur Game Online</h2>
+
+<p>If you want to find an interesting online game, Dinosaur Game Online is the best choice. This game is also about an exciting adventure of a little dinosaur in the prehistoric age. However, a unique thing about this game is that it can be played online. This game is available on our web browser now. Therefore, even when you have an Internet connection, you can use your PC or mobile device to play this game. Therefore, you can play this game anytime and anywhere to relax and have fun. Do not hesitate to save this game in your game arsenal and play it if you have free time now.</p>
+
+<h2>Addictive Gameplay of Dinosaur Game</h2>
+
+<p>The core of this running game lies in its engaging gameplay which attracts many players from all over the world. In addition, its intuitive control is also an attractive thing.</p>
+
+<h3>An adventure of a little dinosaur</h3>
+
+<p>This game will take you back to the prehistoric ages when dinosaurs are popular on Earth. There is a little green dinosaur that wants to start an exciting adventure in the desert. When you play this game, you will transform into this little dinosaur and explore the vast desert. However, remember that you should enter your nickname first. Then, click the left mouse button to start your adventure. In this adventure, you will run unstoppably toward reaching the end of the desert. Your score will constantly increase while you are running. Therefore, I encourage you to run the furthest distance to gain the highest possible score. So, what is the end of this Dinosaur Game? The answer is that there is literally no end in this game. If you are an experienced player and can gain 99999 points, the game will be reset automatically. Then, you will start your adventure again.</p>
+
+<p>While running, you also need to take caution because it is said that the desert hides various dangers. These obstacles can stop your journey if you crash into them. If you want to evade these dangers, you should jump as high as possible or duck. It is important for you to jump or duck in time. Furthermore, your speed will gradually increase when you run further. Running at a fast speed will be a challenge for you because you will have little time to plan for the next moves. Therefore, I advise you to utilize your quick reflexes, quick fingers, and sharp eyes and pay high concentration during this journey. Play the game now and let’s see how far you can go. Participating in the adventure in this game is also an opportunity for you to hone your reflexes and improve your hand-eye coordination.</p>
+
+<h3>Challenges during the journey of the dinosaur</h3>
+
+<p>Encountering dangers is an unavoidable thing in every adventure. Similarly, in the adventure of this game, you also meet many hazards that stop you from running far in the desert. Here is the list of challenges during your journey.</p>
+
+<ul>
+	<li>Cactuses: Cactuses are common plants in the desert. During the path, you can see a cactus or a cactus bush. Be careful with the cactus bushes. You can crash into them if you jump too long or too late.</li>
+	<li>Pterodactyls: The only animal that will hurt you in the desert is pterodactyls. They will fly toward you. Moreover, you will fly at different heights. If you do not jump or couch in time, you can hit these pterodactyls easily and the game is over.</li>
+	<li>The Darkness: The time in this game is simulated in real life. Therefore, there are days and nights. When it is dark, your vision will be limited. Therefore, it may be challenging for you to see the further cactuses or birds. If you do not look carefully, you can hit the dangers during the path.</li>
+</ul>
+
+<h3>How to control</h3>
+
+<p>Click the left mouse button to start the race.</p>
+
+<p>Press an up arrow key, a W key, or the spacebar to jump.</p>
+
+<p>Press a down arrow key or an S key to duck.</p>
+
+<h3>The leaderboard</h3>
+
+<p>What sets this running game apart from other running games is the leaderboard. After you end a journey, your best score will be recorded automatically. You can open the leaderboard to know your rank and your highest score. Besides your rank and highest score, the leaderboard also presents the names, ranks, and scores of the other 9 top players from all over the world. It means that if you are out of the top 10, your name, rank, and score will not be shown on the leaderboard. Note that the statistics in this leaderboard are updated every minute.</p>
+
+<h2>Effective strategies to beat Dinosaur Game</h2>
+
+<p>Even though this game features simple mechanics, this game will be a little hard for inexperienced players. If you are a newbie, you need only quick reflexes but also effective strategies. Building your own tactics before starting your adventure is another key that helps you run the furthest distance and gain the highest score. If you still have no idea in your mind, let’s read some strategies that I want to suggest to you. Hope that the following tactics will assist you a lot during your adventure.</p>
+
+<h3>Do not duck too regularly</h3>
+
+<p>When you meet the pterodactyls, of course, you need to duck to evade them. However, I do not think ducking too regularly is a great way to evade the dangers. Some pterodactyls fly at a low height, so you can easily crash into them even when you duck. Therefore, you should jump instead of ducking to avoid hitting low-flying pterodactyls. Moreover, If you duck, it may be hard for you to react quickly to dodge the next obstacle. For example, when you need to evade a pterodactyl and then a cactus, it should jump two times instead of jumping after ducking.</p>
+
+<h3>Look ahead at all times and plan your moves in advance</h3>
+
+<p>Because the obstacles will appear constantly, you need to look ahead at all times to know which next obstacle you need to dodge. As soon as you see the next obstacle, you need to plan your next move which is jumping or ducking. If you want to jump, place your finger on the up arrow key and then press it when you approach the obstacle. Similarly, if you want to duck, place your finger on the down arrow key and then press it when you approach the danger. Planning your moves in advance is the best way to overcome dangers safely and run further.</p>
+
+<h3>Pay high concentration and be patient</h3>
+
+<p>Besides necessary skills, you also need to be high concentration when playing this game. If you are distracted a little bit, you will not see the upcoming obstacle and hit it. Therefore, do not take your eyes off the screen at any second. Furthermore, your speed will accelerate as you travel. The number of hazards also increases when you run further. These things can make you panic and hit obstacles along the way easily. However, do not worry and try to keep patient at all times. You should focus on timing and take time to jump or duck perfectly.</p>
+
+<h3>Act like you are standing instead of running</h3>
+
+<p>The biggest mistake of beginners is to act like they are running in the desert. However, one tip for you is to act like you are standing and the path is running. This helps to reduce your pressure when running and overcoming an unlimited number of obstacles. Just think that you are standing and all you need to do is to jump or duck.</p>
+		<div class="row-footer-menu" style="width:300px;float: left;display: block;">
+			<div class="flex-wrap">
+				<a href="/about-us" rel="nofollow" class="name-menu-footer"> About Us</a>
+				<a href="/contact-us" rel="nofollow" class="name-menu-footer"> Contact Us</a>
+				<a href="/term-of-use" rel="nofollow" class="name-menu-footer"> Terms of Use</a>
+				<a href="/privacy-policy" rel="nofollow" class="name-menu-footer"> Privacy Policy</a>
+				<a href="/copyright-infringement-notice-procedure" rel="nofollow" class="name-menu-footer"> Copyright Infringement Notice Procedure</a>
+			</div>
+		</div>
+	</div>
+	<link rel="stylesheet" href="https://slope3.com/game/RS/game.css">	
+<div id="gameContainer"></div>
+<div id="loader">
+		<div class="row_loadding">
+			<div  class="ads_loadding_text" style="display:none">Advertisement</div>
+			<div class="ads_loadding" style="display:none">
+				<div class="ads_loadding_content">
+					<div style="width:300px; height:300px; background: #555;">ads</div>
+				</div>
+			</div>
+			<div class="tilte-game">dino3d.com</div>
+			<div class="container">
+				<div class=" pos_progress">
+					<div class="progress">
+						<div class="posbox">					
+							<div class="full"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="div_btn">
+				<button class="btn_play" onclick="none_loadding()">Play</button>
+			</div>
+            <div class="box-full"></div>
+		</div>    
+ </div>
+ <div id="AdsInGame">	 
+	<div class="row_loadding">
+	<div  class="ads_loadding_text">Advertisement</div>
+		<div class="ads_inGame">
+			<div class="ads_loadding_content">
+				<div style="width:300px; height:300px; background: #555;">ads</div>
+			</div>
+		</div>
+		<div id="vaule_countdown"></div>		
+		<div id="btn_close">
+			<button class="btn_play" onclick="none_ads_inGame(true)">Close</button>
+		</div>
+        <div class="box-full"></div>
+	</div>
+ </div>
+<script src="/gamep/dino3d/Build/UnityLoader.js"></script>
+<script>
+    window.originalFolder = "/gamep/dino3d/";
+    UnityLoader.compatibilityCheck = function (e, t, r) { t(); };
+    var gameInstance = UnityLoader.instantiate("gameContainer", "/gamep/dino3d/Build/dino3d.json", { onProgress: UnityProgress });
+    function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module) {
+            return;
+        }
+        if (!gameInstance.progress) {
+            const progress = document.querySelector("#loader .progress");
+            progress.style.display = "block";
+            gameInstance.progress = progress.querySelector(".full");
+        }
+        gameInstance.progress.style.transform = `scaleX(${progress})`;
+        if (progress === 1 && !gameInstance.removeTimeout) {
+            gameInstance.removeTimeout = setTimeout(function () {
+                document.querySelector("#div_btn").style.display = "block";
+            }, 2000);
+        }
+    }
+	function show_ads_inGame() {
+		document.getElementById("AdsInGame").style.display = "block";
+		var countDownClose = 6;
+		var x = setInterval(function() {
+		countDownClose=countDownClose-1;	
+		  document.getElementById("vaule_countdown").innerHTML = "Continue in " + countDownClose;
+		  if (countDownClose < 0) {
+			clearInterval(x);
+            document.getElementById("vaule_countdown").style.display = "none";
+            document.getElementById("btn_close").style.display = "block";
+            countDownClose = 6;
+            document.getElementById("vaule_countdown").innerHTML = "Continue in " + countDownClose;
+		  }
+		}, 1000);		
+	}
+	function none_ads_inGame(sucess) {
+        document.getElementById("AdsInGame").style.display = "none";
+        document.getElementById("btn_close").style.display = "none";
+        document.getElementById("vaule_countdown").style.display = "block";
+	}
+	function none_loadding() {
+		document.querySelector("#loader").style.display = "none";
+	}
+    var theElement = document.getElementById("gameContainer");
+    theElement.addEventListener("mouseup", tapOrClick, false);
+    theElement.addEventListener("touchend", tapOrClick, false);
+    function tapOrClick(event) {
+        //fullScreenAPI();
+        event.preventDefault();
+        return false;
+    }
+    function fullScreenAPI() {
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1;
+        if (isAndroid) {
+            GoFullScreen(document.documentElement);
+        }
+    }
+    function GoFullScreen(element) {
+        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+            if (element.requestFullscreen && document.fullscreenEnabled) {
+                element.requestFullscreen();
+            }
+            else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            }
+            else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
+            else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+    }
+
+    const needResize=false;	
+    const aspectRatio = 1920  / 1080;
+    const canvas = document.getElementById("#canvas");
+    if (canvas&&needResize) {
+        const wrapper = document.createElement("div");
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+        wrapper.style.alignItems = "center";
+        wrapper.style.position = "absolute";
+        wrapper.style.width = "100vw";
+        wrapper.style.height = "100vh";
+        wrapper.style.top = "0";
+        wrapper.style.left = "0";
+        canvas.parentNode.insertBefore(wrapper, canvas);
+        wrapper.appendChild(canvas);
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+    }
+    function resizeCanvas() {
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+
+        if (winWidth / winHeight > aspectRatio) {
+            const newHeight = winHeight;
+            const newWidth = newHeight * aspectRatio;
+            canvas.style.height = newHeight + "px";
+            canvas.style.width = newWidth + "px";
+        } else {
+            const newWidth = winWidth;
+            const newHeight = newWidth / aspectRatio;
+            canvas.style.width = newWidth + "px";
+            canvas.style.height = newHeight + "px";
+        }
+    }
+    
+</script>
+
+<script>
+    function UnityCallEndgameJs() {
+        // console.log("untiy call end game");
+    }
+    function UnityCallPlayJs() {
+        // console.log("untiy call Play game");
+    }
+    function UnityCallLeaderboardJs() {
+        // console.log("untiy call On Leaderboard");
+    }
+    function UnityCallAgainJs() {
+        // console.log("unity call Again");
+    }
+    function UnityCallBackHomeJs() {
+        // console.log("untiy call backHome");
+    }
+    function UnityCallChangeDayLeaderboardJs() {
+        // console.log("untiy call change day leaderboard");
+    }
+    function UnityCallCloseLeaderboardJs() {
+        // console.log("untiy call close leaderboard");
+    }
+</script>
+	<script>
+		let FlagTimeout = 0;
+		FlagTimeout = 1;
+		let timeTimeout = 39000;
+
+		function ChangeFlagTimeout() {
+			FlagTimeout = 1;
+			setTimeout(function() {
+				FlagTimeout = 0;
+			}, timeTimeout);
+		}
+
+		function none_ads_inGame(acb) {
+			console.log('none_ads_inGame: ' + acb);
+			document.getElementById("AdsInGame").style.display = "none";
+			document.getElementById("btn_close").style.display = "none";
+			document.getElementById("vaule_countdown").style.display = "block";
+		}
+
+		function show_ads_inGame() {
+			if (FlagTimeout == 0) {
+				show_ads_inGame_dp();
+				ChangeFlagTimeout();
+			} else {
+				setTimeout(() => {
+					none_ads_inGame(false);
+				}, 10);
+			}
+		}
+
+		function none_loadding() {
+			let loader = document.querySelector("#loader");
+			if (loader == null) {
+				loader = document.querySelector("#unity-loading-bar")
+			}
+			loader.style.display = "none";
+		}
+
+		function show_ads_inGame_dp() {	
+		setTimeout(() => {
+		  none_ads_inGame(false);
+		}, 100);		
+		/*
+			document.getElementById("AdsInGame").style.display = "block";
+			let ads_innt = '';
+			document.getElementsByClassName("ads_loadding_content")[1].innerHTML = ads_innt;
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			var countDownClose = 6;
+			var x = setInterval(function() {
+				countDownClose = countDownClose - 1;
+				document.getElementById("vaule_countdown").innerHTML = "Continue in " + countDownClose;
+				if (countDownClose < 0) {
+					clearInterval(x);
+					document.getElementById("vaule_countdown").style.display = "none";
+					document.getElementById("btn_close").style.display = "block";
+					countDownClose = 6;
+					document.getElementById("vaule_countdown").innerHTML = "Continue in " + countDownClose;
+
+				}
+			}, 1000);
+			*/
+		}
+
+		function show_Ads1() {
+			/*
+			let ads1 = '';;
+			document.getElementById("Ads1").innerHTML = ads1;
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			*/
+		}
+
+		function show_Ads_Loading() {			
+			/*
+			let ads_load = '';
+			document.getElementsByClassName("ads_loadding_content")[0].innerHTML = ads_load;
+			(adsbygoogle = window.adsbygoogle || []).push({});		
+				*/
+		}
+		show_Ads1();
+		show_Ads_Loading();
+		document.getElementsByClassName("tilte-game")[0].innerHTML = 'Dinosaur Game';
+	</script>
+	<script>
+		(function() {
+			function isEditable(el) {
+				if (!el) return false;
+				if (el.isContentEditable) return true;
+				var tag = (el.tagName || '').toUpperCase();
+				return tag === 'INPUT' || tag === 'TEXTAREA';
+			}
+
+			var origAddEventListener = EventTarget.prototype.addEventListener;
+			EventTarget.prototype.addEventListener = function(type, listener, options) {
+				if (['keydown', 'keypress', 'keyup'].includes(type) &&
+					(this === document || this === window)) {
+					var wrapped = function(ev) {
+						if (isEditable(ev.target)) {
+							return;
+						}
+						return listener.call(this, ev);
+					};
+					return origAddEventListener.call(this, type, wrapped, options);
+				}
+				return origAddEventListener.call(this, type, listener, options);
+			};
+		})();
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			function ToggleInfo() {
+				let width_panel = $("div.main-panel").css('width');
+				width_panel = width_panel.replaceAll('px', '');
+				if ((width_panel >= 300)) {
+					$("div.main-panel").css('width', '0px');
+					$("div.btn-button").css('width', '0px');
+					$("div.main-panel-ads").css('display', 'none');
+					$("div.HiShPa").css('display', 'none');
+					$('button.hide-main-panel').children('i').html('Info');
+				} else {
+					$("div.main-panel").css('width', $("div.main-panel").css('max-width'));
+					$("div.btn-button").css('width', $("div.main-panel").css('max-width'));
+					$("div.main-panel-ads").css('display', 'block');
+					$("div.HiShPa").css('display', 'block');
+					$('button.hide-main-panel').children('i').html('>>');
+				}
+			}
+			$('button.hide-main-panel').click(function() {
+				ToggleInfo();
+			});
+		});
+	</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"94baebbe11e14f61b35490222c7794cc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
